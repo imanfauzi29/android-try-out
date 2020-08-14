@@ -8,24 +8,15 @@
     tools:context=".activity.MainActivity"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/search"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
             <EditText
-                android:id="@+id/etSearch"
+                android:id="@+id/search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Cari product"
                 android:imeOptions="actionSearch"
-                android:inputType="textCapWords" />
+                android:inputType="textCapWords"
+                app:layout_constraintTop_toTopOf="parent"/>
 
-        </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvTodos"

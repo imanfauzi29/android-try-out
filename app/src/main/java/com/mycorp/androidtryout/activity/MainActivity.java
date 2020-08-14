@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.widget.EditText;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.mycorp.androidtryout.R;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     TodoViewModel todoViewModel;
     TodoAdapter todoAdapter;
     RecyclerView recyclerView;
-    TextInputEditText textSearch;
+    EditText textSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.rvTodos);
-        textSearch = findViewById(R.id.etSearch);
+        textSearch = findViewById(R.id.search);
 
         todoViewModel = ViewModelProviders.of(this).get(TodoViewModel.class);
         todoViewModel.getDataResponse().observe(this, new Observer<DataResponse>() {
